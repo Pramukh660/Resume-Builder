@@ -42,6 +42,26 @@
             width: fit-content;
             margin: auto;
         }
+
+        .resimg {
+            z-index: 2;
+            position: relative;
+            width: auto;
+            height: auto;
+            transition: 0.5s;
+        }
+
+        .resimg img{
+            display: block;
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .resimg:hover {
+            z-index: 3;
+            transform: scale(1.075);
+            box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5);
+        }
     </style>
 
     <!-- Header -->
@@ -80,17 +100,21 @@
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-1">
                     <div class="relative">
-                        <a href="3/index.html"><img class="info-image relative z2" src="./img/resume-3.jpg"
-                                alt="Teepe"></a>
-                        <div class="pattern pattern--right-middle absolute z1"></div>
+                        <div class="resimg">
+                            <a href="3/index.html"><img class="info-image relative z2" src="./img/resume-3.jpg"
+                                    alt="Teepe"></a>
+                        </div>
+                        <div class="pattern pattern--right-middle absolute z1" id="back"></div>
                     </div>
                 </div>
 
                 <!-- Cabin -->
                 <div class="grid-column span-half pt3 pb3 mobile-m order-3">
                     <div class="relative">
-                        <a href="1/index.html"><img class="info-image relative z2" src="./img/resume-1.jpeg"
-                                alt="Cabin"></a>
+                        <div class="resimg">
+                            <a href="1/index.html"><img class="info-image relative z2" src="./img/resume-1.jpeg"
+                                    alt="Cabin"></a>
+                        </div>
                         <div class="pattern pattern--left-down absolute z1"></div>
                     </div>
                 </div>
@@ -111,8 +135,10 @@
                 </div>
                 <div class="grid-column span-half pt3 pb3 mobile-m order-5">
                     <div class="relative">
-                        <a href="2/index.html"><img class="info-image relative z2" src="./img/resume-2.jpeg"
-                                alt="Teepee"></a>
+                        <div class="resimg">
+                            <a href="2/index.html"><img class="info-image relative z2" src="./img/resume-2.jpeg"
+                                    alt="Teepee"></a>
+                        </div>
                         <div class="pattern pattern--right-middle absolute z1"></div>
                     </div>
                 </div>
@@ -197,7 +223,6 @@
             <p>Developed & Design by <b>Bakejobs</b> </p>
         </div>
     </footer>
-
 </body>
 
 </html>
